@@ -12,12 +12,16 @@ body, nav {
     background-color: #ebe6d6;
 }
 
-p, li, input {
+p {
+    text-align: center;
+}
+
+p, li, input, nav a, #recipeLinks a, form {
     font-family: 'Quicksand', sans-serif;
     font-size: 1.3rem;
 }
 
-nav a, footer a {
+nav a, footer a, #recipeLinks a {
     text-decoration: none;
 }
 
@@ -25,9 +29,17 @@ body {
     margin: 0;
 }
 
+header, main, footer {
+    animation: fadeMoveIn 1s ease-in-out;
+}
+
 header {
     margin: 0;
     padding: 40px 40px 0px 40px;
+}
+
+main {
+    margin: 0 40px 40px 40px;
 }
 
 section {
@@ -40,12 +52,13 @@ h1 {
     margin: 0;
     font-family: 'Bagnard', sans-serif;
     padding-top: 70px;
+    color: tomato;
 }
 
 nav {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     position: sticky;
     top: 0;
@@ -60,6 +73,7 @@ h2 {
 
 h4 {
     font-size: 2rem;
+    padding: 0;
 }
 
 h2, h4 {
@@ -67,15 +81,66 @@ h2, h4 {
     font-weight: 700;
 }
 
+#history div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
 img {
     width: 300px;
     height: auto;
     border-radius: 30px;
-    border: 10px solid yellow;
+    border: 10px solid black;
+    margin: 10px;
+    display: inline;
 }
 
-ul {
+#listDivs {
+    display: flex;
+    flex-direction: row;
+}
+
+#ingredients {
+    flex: 1;
+    margin-right: 50px;
+}
+
+#recipe {
+    flex: 2;
+}
+
+ul li:hover {
     color: tomato;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#more p {
+    text-align: center;
+}
+
+#recipeLinks {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#recipeLinks a {
+    padding: 20px;
+    width: 300px;
+    background-color: tomato;
+    margin: 0 20px 0 0;
+    text-align: center;
+    border-radius: 30px;
 }
 
 footer {
@@ -83,9 +148,65 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding: 0 20px 0 20px;
+}
+
+li {
+    margin: 0 0 10px 0;
 }
 
 span {
     font-weight: bold;
     display: block;
+}
+
+a {
+    color: black;
+}
+
+a:hover, a:active {
+    opacity: 0.3;
+}
+
+#recipeLinks a:hover {
+    opacity: 1;
+    background-color: #e33e22;
+}
+
+@media screen and (max-width: 1200px) {
+    h1 {
+        font-size: 5rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    h4 {
+        font-size: 1.5rem
+    }
+
+    p, li, input, nav a, #recipeLinks a {
+        font-size: 1rem;
+    }
+}
+
+
+@media screen and (max-width: 800px) {
+    #history div, #listDivs{
+        flex-direction: column;
+    }
+}
+
+
+@keyframes fadeMoveIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
