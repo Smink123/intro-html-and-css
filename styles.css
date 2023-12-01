@@ -1,0 +1,91 @@
+@font-face {
+    font-family: 'Bagnard';
+    src: url('Bagnard.otf') format('opentype');
+}
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body, nav {
+    background-color: #ebe6d6;
+}
+
+p, li, input {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.3rem;
+}
+
+nav a, footer a {
+    text-decoration: none;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    margin: 0;
+    padding: 40px 40px 0px 40px;
+}
+
+section {
+    padding-top: 40px;
+}
+
+h1 {
+    font-size: 9rem;
+    text-align: center;
+    margin: 0;
+    font-family: 'Bagnard', sans-serif;
+    padding-top: 70px;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 20px;
+    border-bottom: 1px solid black;
+}
+
+h2 {
+    font-size: 5rem;
+}
+
+h4 {
+    font-size: 2rem;
+}
+
+h2, h4 {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+}
+
+img {
+    width: 300px;
+    height: auto;
+    border-radius: 30px;
+    border: 10px solid yellow;
+}
+
+ul {
+    color: tomato;
+}
+
+footer {
+    border-top: 1px black solid;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+span {
+    font-weight: bold;
+    display: block;
+}
